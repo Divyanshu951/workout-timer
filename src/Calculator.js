@@ -36,6 +36,7 @@ function Calculator({ workouts, allowSound }) {
     playSound();
   }, [duration, allowSound]);
 
+  // Last lec
   useEffect(() => {
     document.title = `Your ${number}-exercise workout`;
   }, [number]);
@@ -64,7 +65,7 @@ function Calculator({ workouts, allowSound }) {
             min="1"
             max="5"
             value={sets}
-            onChange={(e) => setSets(e.target.value)}
+            onChange={(e) => setSets(+e.target.value)}
           />
           <span>{sets}</span>
         </div>
